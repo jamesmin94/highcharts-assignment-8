@@ -5,6 +5,16 @@
 body {
   background: #000;
   color: #fff;
-  font-family: 'Verdana', sans-serif;
+  font-family: 'Raleway', 'Verdana',  sans-serif;
   margin: 4rem;
 }
+
+h1{
+  font-family: 'Roboto Slab', 'Georgia', serif;
+  padding: 40px;
+}
+
+p{
+  margin: 0;
+  padding: 40px;
+ }
