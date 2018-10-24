@@ -22,12 +22,9 @@ p{
   display: flex;
  }
 
- }
- #Gross Domestic Product {
+ @media only screen and (max-width:722 px) {
+   body {
+     background-color: 000;
 
- }
-
- #Goverment Comsumption expenditures and Gross investment in 2018 - Q1 {
-
-
+   }
  }
