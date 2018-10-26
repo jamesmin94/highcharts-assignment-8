@@ -1,7 +1,7 @@
 Highcharts.chart('chart1', {
 
   title: {
-    text: 'The economic indicators in the United States.'
+    text: 'The economic indicators trend in the United States.'
   },
   xAxis: {
     title: {
