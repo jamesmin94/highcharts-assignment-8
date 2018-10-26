@@ -24,8 +24,104 @@
       <P>The bar graph shows the composition of Goverment expenditures and goverment investment in the United States, at 2018 first quarter. The goverment expenditures and inverstment is an important elements of GDP. According to the bar graph goverment invest a lots ot money to state and local.
         We can find that the state and local economy is influenced by goverment investment. As GDP increases, goverment investment increases too. Based on these two graphs, we conclud that the current economic situations in the United States is good. </p>
   </div>
-  <script src="scripts/chart1.js" onload=true></script>
-  <script src="scripts/chart2.js"></script>
+
+  <script>
+   Highcharts.chart( 'chart1', {
+
+  title: {
+    text: 'The economic indicators in the United States.'
+  },
+
+  xAxis: {
+    title: {
+      text: 'years'
+    },
+    categories: ['2016 - Q1', 'Q2', 'Q3', 'Q4', '2017 - Q1', 'Q2', 'Q3', 'Q4', '2018 - Q1', 'Q2']
+  },
+  yAxis: {
+    title: {
+      text: 'Billions of Dollors $'
+    }
+  },
+  legend: {
+    layout: 'vertical',
+    align: 'center',
+    verticalAlign: 'top'
+  },
+
+  series: [{
+      name: 'Personal Income',
+      data: [15946.5, 16031.6, 16170.6, 16351.8, 16604.4, 16721.2, 16895.1, 17103.1, 17319.2, 17499.8]
+    }, {
+      name: 'Gross Domestic Product',
+      data: [18409.1, 18640.7, 18799.6, 18979.2, 19162.6, 19359.1, 19588.1, 19831.8, 20041.0, 20411.9]
+    }
+  ]
+
+});
+</script>
+  <script>
+  Highcharts.chart('chart2', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Government consumption expenditures and gross investment in 2018 - Q1 '
+    },
+  
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Billons of Dollors'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '${point.y:.2f} B'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>${point.y:.2f} billion<br/>'
+    },
+
+    "series": [
+        {
+            "name": "Sections",
+            "colorByPoint": true,
+            "data": [
+                {
+                    "name": "Federal",
+                    "y": 1294.8,
+                },
+                {
+                    "name": "National Defense",
+                    "y": 759.0,
+                },
+                {
+                    "name": "Nondefense",
+                    "y": 535.8,
+                },
+                {
+                    "name": "State and Local",
+                    "y": 2162.0,
+                }
+            ]
+        }
+    ]
+});
+  </script>
 
 <footer>
 </footer>
